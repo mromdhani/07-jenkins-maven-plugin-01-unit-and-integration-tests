@@ -26,7 +26,7 @@ public class GreetingMessageIT {
 		else
 			this.message = "Good Evening!";
 
-		assertEquals(message, var.printMessage());
+		assertEquals(message , var.printMessage());
 
 	}
 }

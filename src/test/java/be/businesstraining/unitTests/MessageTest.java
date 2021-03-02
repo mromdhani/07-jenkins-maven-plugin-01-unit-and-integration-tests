@@ -9,11 +9,19 @@ import be.businesstraining.domain.Message;
 
 public class MessageTest {
 
-	private Message message = new Message();
+	private Message message = new Message();  // Object Under Test
 
 	@Test
-	public void messageSaysHello() {
-		assertThat(message.sayHello(), containsString("Hello World"));
+	public void sayHelloTest() {
+
+		// ARRANGE
+		String expected = "Hello World";
+
+		//ACT
+		String actual = message.sayHello();
+
+		//ASSERT
+		assertEquals(expected, actual);
 	}
 
 }
