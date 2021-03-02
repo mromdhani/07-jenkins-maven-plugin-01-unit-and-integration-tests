@@ -15,8 +15,8 @@ public class MessageTest {
 	public void sayHelloTest() {
 
 		// ARRANGE
-		// String expected = "Hello World";
-		String expected = "Bonjour le monde";
+		 String expected = "Hello World";
+		//String expected = "Bonjour le monde";
 
 		//ACT
 		String actual = message.sayHello();
