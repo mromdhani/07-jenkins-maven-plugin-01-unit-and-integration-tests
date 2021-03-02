@@ -16,7 +16,7 @@ pipeline {
 	 
 	   stage('Build & Unit test'){
 		  steps {
-				bat 'mvn clean verify -DskipITs=true';
+				sh 'mvn clean verify -DskipITs=true';
 		      	junit '**/target/surefire-reports/TEST-*.xml'
 		      	archiveArtifacts  'target/*.jar'
 
@@ -25,7 +25,7 @@ pipeline {
 	
 	  stage ('Integration Test'){
 	      steps {
-    			bat  'mvn clean verify -Dsurefire.skip=true';
+    			sh  'mvn clean verify -Dsurefire.skip=true';
 				junit '**/target/failsafe-reports/TEST-*.xml'
       			archiveArtifacts  'target/*.jar'
       		}
